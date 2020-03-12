@@ -1,0 +1,41 @@
+version: '3'
+
+services:
+  im:
+    image: grycap/im
+    container_name: im
+    volumes:
+      - ~/Documents/im:/etc/im
+    networks: 
+      - backend    
+    ports:
+      - "8899:8899"
+      - "8800:8800"
+  im-web:
+    image: grycap/im-web
+    depends_on: 
+      - im
+    container_name: im-web
+    env_file:
+      - "im-web.env"
+    networks:
+      - frontend
+      - backend
+    ports: 
+      - "80:80"
+      - "443:443"
+  a4c:
+    image: alien4cloud/alien4cloud
+    container_name: a4c
+    networks: 
+      - frontend
+    ports: 
+      - "8088:8088"
+
+
+networks: 
+  frontend:
+    driver: bridge
+
+  backend:
+    driver: bridge
