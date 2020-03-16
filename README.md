@@ -14,4 +14,12 @@ Just run:
 $ docker-compose up --build
 ```
 
+### im-web
+With your browser go to [http://localhost/im-web/](http://localhost/im-web/).
 
+
+### alien4cloud
+With your browser go to [http://localhost:8088/#/](http://localhost:8088/#/)
+* User: admin
+* Pass: admin
+> Local instance.
