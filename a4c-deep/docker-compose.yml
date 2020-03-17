@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  a4c:
+    container_name: a4c
+    image: indigodatacloud/alien4cloud-deep:2.0-r0
+    restart: unless-stopped
+    env_file:
+      - .env
+    ports:
+            - '443:8443'
+            - '80:8080'
+    volumes:
+      - ~/Documents/a4c-deep:/data
+      - /etc/ssl:/certs:ro
+
+
