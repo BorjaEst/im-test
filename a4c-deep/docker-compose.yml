@@ -8,8 +8,7 @@ services:
     env_file:
       - .env
     ports:
-            - '443:8443'
-            - '80:8080'
+            - '8082:8080'
     volumes:
       - ~/Documents/a4c-deep:/data
       - /etc/ssl:/certs:ro

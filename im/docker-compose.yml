@@ -22,8 +22,7 @@ services:
       - frontend
       - backend
     ports: 
-      - "80:80"
-      - "443:443"
+      - "8081:80"
 
 
 networks: 
