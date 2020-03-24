@@ -4,8 +4,11 @@ services:
   im:
     image: grycap/im
     container_name: im
+    env_file: 
+      - "im.env"
     volumes:
-      - ~/Documents/im:/etc/im
+      - ~/Documents/im/etc:/etc/im
+      - ~/Documents/im/db:/db
     networks: 
       - backend    
     ports:
