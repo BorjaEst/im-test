@@ -1,0 +1,8 @@
+network net (outbound = 'yes')
+system node (
+   cpu.count = 1 and
+   memory.size = 1G and
+   net_interface.0.connection = 'net' and
+   disk.0.image.url = 'aws://eu-central-1/ami-0b418580298265d5c'
+)
+deploy node 1
