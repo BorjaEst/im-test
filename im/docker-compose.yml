@@ -2,35 +2,22 @@ version: '3'
 
 services:
   im:
-    image: grycap/im
+    image: grycap/im:1.9.1  # <-- This is the im container version
     container_name: im
-    env_file: 
-      - "im.env"
+    env_file:
+        - "im/im.env"
     volumes:
-      - ~/Documents/im/etc:/etc/im
-      - ~/Documents/im/db:/db
-    networks: 
-      - backend    
+      - ./im/etc/im:/etc/im
     ports:
-      - "8899:8899"
-      - "8800:8800"
+      - "8800:8800" # <-- API port is map to 8800
   im-web:
     image: grycap/im-web
     depends_on: 
       - im
     container_name: im-web
     env_file:
-      - "im-web.env"
-    networks:
-      - frontend
-      - backend
+      - "im-web/im-web.env"
     ports: 
-      - "8081:80"
-
-
-networks: 
-  frontend:
-    driver: bridge
-
-  backend:
-    driver: bridge
+      - "80:80"
+    links:
+      - im:im grycap/im-web
