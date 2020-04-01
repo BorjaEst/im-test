@@ -11,6 +11,7 @@ services:
       - ./im/db:/db
     ports:
       - "8800:8800" # <-- API port is map to 8800
+    network_mode: "bridge"
   im-web:
     image: grycap/im-web
     depends_on: 
@@ -24,3 +25,4 @@ services:
       - "80:80"
     links:
       - im:im grycap/im-web
+    network_mode: "bridge"
