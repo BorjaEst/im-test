@@ -8,6 +8,7 @@ services:
         - "im/im.env"
     volumes:
       - ./im/etc/im:/etc/im
+      - ./im/db:/db
     ports:
       - "8800:8800" # <-- API port is map to 8800
   im-web:
@@ -16,7 +17,9 @@ services:
       - im
     container_name: im-web
     env_file:
-      - "im-web/im-web.env"
+      - "./im-web/im-web.env"
+    volumes:
+      - ./im-web/db:/home/www-data
     ports: 
       - "80:80"
     links:
