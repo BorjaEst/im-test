@@ -1,5 +1,5 @@
 # im-test
-Test the applications of Infrastructure Manager with TOSCA templates
+Test the applications of Infrastructure Manager with TOSCA templates.
 
 ## Dependencies
 * [docker](https://www.docker.com/)
@@ -8,43 +8,49 @@ Test the applications of Infrastructure Manager with TOSCA templates
 > I recommend to add your user to docker group to avoid calling sudo always:
 > [Post-installation steps for Linux](https://docs.docker.com/install/linux/linux-postinstall)
 
-## Usage
+## Start and stop
+
 Just run:
 ```sh
-$ docker-compose up --build
+$ docker-compose -f "im/docker-compose.yml" up -d --build
+```
+Stop with:
+```sh
+$ docker-compose -f "im/docker-compose.yml" down
 ```
 
-### im-web
-With your browser go to [http://localhost/im-web/](http://localhost/im-web/).
+Wait a minute (more or less) and with your browser go to [http://localhost/im-web](http://localhost/im-web)
+* User: admin
+* Pass: admin
+> Local instance.
 
 
-### alien4cloud
+Just run:
+```sh
+$ docker-compose -f "im/docker-compose.yml" up -d --build
+```
+Stop with:
+```sh
+$ docker-compose -f "im/docker-compose.yml" down
+```
+
 With your browser go to [http://localhost:8088/#/](http://localhost:8088/#/)
 * User: admin
 * Pass: admin
 > Local instance.
 
 
-
-
 # Notes
+1. Watch [Infrastructure Manager Demo on EGI FedCloud](https://www.youtube.com/watch?v=barnku5AsBA&list=PLgPH186Qwh_37AMhEruhVKZSfoYpHkrUp&index=5).
+2. Login into the [IM service](https://appsgrycap.i3m.upv.es:31443/im-web/index.php) with your EGI credentials.
+3. Go to Credentials and add a source (Button Add+); Select type "EGI" and introduce  selecting your VO and Site. After that "Save".
+4. Use the 
 
->It looks that the export feature will be available in the next release. 
->[a4c - TOSCA](https://alien4cloud.github.io/#/documentation/2.1.0/concepts/tosca.html)
+
+## Issues
 
 
-> https://alien4cloud.github.io/#/documentation/2.2.0/concepts/tosca.html
 
-> https://a4c.ncg.ingrid.pt/#/
-
-> https://github.com/indigo-dc/alien4cloud-deep/blob/master/README.md
-
-> https://github.com/indigo-dc/alien4cloud-deep/blob/master/README.md
-
-> https://github.com/indigo-dc/tosca-templates
-
-> https://github.com/indigo-dc/tosca-templates/blob/master/simple-node.yml
-
-> Extensive info on TOSCA templates:
-> - http://docs.oasis-open.org/tosca/TOSCA-Simple-Profile-YAML/v1.0/csd03/TOSCA-Simple-Profile-YAML-v1.0-csd03.html
+## Optional
+- README.md inside a4c-deep folder for a GUI to generate tosca templates 
 
