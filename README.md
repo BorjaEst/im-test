@@ -34,6 +34,10 @@ Wait a minute (more or less) and with your browser go to [http://localhost/im-we
 6. You will see your instance is beeing created.
 
 
+Images!!!
+
+
+
 ## Issues
 
 
