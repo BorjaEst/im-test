@@ -1,47 +1,41 @@
-# im-test
-Test the applications of Infrastructure Manager with TOSCA templates.
+# IM Synergy
+Infrastructure Manager instructions and applications for synergy project.
 
-## Dependencies
-* [docker](https://www.docker.com/)
-* [docker-compose](https://docs.docker.com/compose/)
+# Using the online IM Dashboard
+Infrastrutrue Manager offers an onlyne service on the EOSC market place. it is available for all users therefore can be use in the Synergy project:
+![EOSC-IM_Service](./images/EOSC-IM_Service.jpg)
 
-> I recommend to add your user to docker group to avoid calling sudo always:
-> [Post-installation steps for Linux](https://docs.docker.com/install/linux/linux-postinstall)
+Advantages:
+-
+- Already running instance out of synergy resources.
+- Maintenance out of the scope of synergy project.
+- Simple usage of resources registered in [AppDB](https://appdb.egi.eu/).
 
-## Running IM in local 
+Disadvantages:
+- 
+- To run customised TOSCA templates requires suport from UPV.
 
-Just run:
-```sh
-$ docker-compose -f "im/docker-compose.yml" up -d --build
-```
-Stop with:
-```sh
-$ docker-compose -f "im/docker-compose.yml" down
-```
-
-Wait a minute (more or less) and with your browser go to [http://localhost/im-web](http://localhost/im-web)
-* User: admin
-* Pass: admin
-> Local instance.
+## Usage: [./im/dashboard/README.md](./im/dashboard/README.md)
 
 
-# Running IM in the EOSC service 
-1. Watch [Infrastructure Manager Demo on EGI FedCloud](https://www.youtube.com/watch?v=barnku5AsBA&list=PLgPH186Qwh_37AMhEruhVKZSfoYpHkrUp&index=5).
-2. Login into the [IM service](https://appsgrycap.i3m.upv.es:31443/im-web/index.php) with your EGI credentials.
-3. Go to Credentials and add a source (Button Add+); Select type "EGI" and introduce  selecting your VO and Site. After that "Save".
-4. Create a topology in "Topologies > Add +". You can use one of the templates located in "im-web > tosca" then clic on "Save".
-5. To lunch in the instance on the endpoint, on the page "Topologies" click on the launch icon.
-6. You will see your instance is beeing created.
+# Using the IM-Web (online or local)
+More detailed version of the IM Dashboard which offers more configuration options (at complexity cost). 
+![im-web_interface](./images/im-web_interface.jpg)
+
+Advantages:
+-
+- Local instance with high customization features.
+- Can run customised TOSCA templates.
+
+Disadvantages:
+- 
+- Maintenance and resources would have to be inside synergy project.
+- Some issues are still not solved.
+
+## Usage: [./im/im-web/README.md](./im/im-web/README.md) 
 
 
-Images!!!
+# Creating custom TOSCA templates
+Graphical User Interface to generate tosca templates. Also it is a tool to interface orchestrators, but it is not currently in the scope of synergy project.
 
-
-
-## Issues
-
-
-
-## Optional
-- README.md inside a4c-deep folder for a GUI to generate tosca templates 
-
+## Usage: [./a4c-deep/README.md](./a4c-deep/README.md)
