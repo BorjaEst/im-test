@@ -40,5 +40,4 @@ In this page, following the menu on the arror 1, you can manage the status of yo
 
 And that is all! To access the VM you have to use [ssh](https://www.ssh.com/ssh/key/). You can find easy isntructions about how to access with your downloaded private "key.pem" in this link:
 
-## [SHH access instructions]():  TBD
-
+## [SHH access instructions](../../ssh/README.md)
