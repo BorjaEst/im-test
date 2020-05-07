@@ -15,7 +15,7 @@ Disadvantages:
 - 
 - To run customised TOSCA templates requires suport from UPV.
 
-## Usage: [./im/dashboard/README.md](./im/dashboard/README.md)
+## Usage: [./im-eosc/dashboard/README.md](./im-eosc/dashboard/README.md)
 
 
 # Using the IM-Web (online or local)
@@ -32,7 +32,8 @@ Disadvantages:
 - Maintenance and resources would have to be inside synergy project.
 - Some issues are still not solved.
 
-## Usage: [./im/im-web/README.md](./im/im-web/README.md) 
+## Usage eosc: [./im-eosc/im-web/README.md](./im-eosc/im-web/README.md) 
+## Usage local: [./im-local/im-web/README.md](./im-local/im-web/README.md) 
 
 
 # Creating custom TOSCA templates

@@ -18,7 +18,7 @@ topology_template:
       capabilities:
         endpoint:
           properties:
-            network_name: net-eosc-synergy.eu
+            network_name: PUBLIC
         scalable:
           properties:
             count: 1
